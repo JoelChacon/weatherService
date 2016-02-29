@@ -1,0 +1,18 @@
+{
+	border:black solid 1px;
+}
+.body {
+	background: blue;
+}
+.center {
+	text-align: center;
+}
+
+.input1 {
+ position: relative;
+ left:700px;
+ }
+ .results {
+ 	position:relative;
+ 	left:700px;
+ }

@@ -9,8 +9,17 @@ angular.module('myApp').service('JoelsWeatherService', function($http, $q){
 		}).then(function(response){
 			var weatherData = response.data.list;
 			var weatherList = [];
+			function formatDate(timestamp) {
+				var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+				var d = new Date(Number.parseInt(timestamp) * 1000);
+				return d.toLocaleString('en-US', options);
+			}
 			for (var i = 0; i < weatherData.length; i += 8) {
-				weatherList.push({ temp: weatherData[i].main.temp, desc: weatherData[0].weather[0].description });
+				weatherList.push({
+					date: formatDate(weatherData[i].dt),
+					temp: weatherData[i].main.temp,
+					desc: weatherData[0].weather[0].description
+				});
 			}
 			deferred.resolve(weatherList);
 			console.log("1stResponse", response);

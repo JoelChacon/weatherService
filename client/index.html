@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body ng-controller="myMainController" class='body'>
+	<h1 class="center">Joel's weather service</h1>
+	<p class="center">I know the weather better than weather itself</p>
+	<h2 class="center">the 5 day weather forecast</h2>	
+	<div class="input1">
+		<input type="text" ng-model="getWeatherFromAPI" placeholder="Enter City" />
+		<button ng-click='functionCall()'> Submit </button>
+
+	</div>	
+
+	<div ng-repeat="weather in weatherObj" class="results">
+		<span>On </span>{{weather.date}}
+		<span>it will be </span>{{weather.temp}}
+		{{weather.desc}}		
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+	<script src="app.js" type="text/javascript"></script>
+	<script src="myMainController.js" type="text/javascript"></script>
+	<script src="JoelsWeatherService.js" type="text/javascript"></script>
+</body>
+</html>

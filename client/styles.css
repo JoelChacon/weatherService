@@ -6,6 +6,13 @@
 	background-repeat: no-repeat;
 	background-position: bottom;
 	height: 100vh;
+
+    background: url(images/beauty.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 }
 .center {
 	text-align: center;

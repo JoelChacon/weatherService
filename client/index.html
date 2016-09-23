@@ -16,7 +16,9 @@
 
 	<div ng-repeat="weather in weatherObj" class="results">
 		<span>On </span>{{weather.date}}
-		<span>it will be </span>{{weather.temp}}
+		<br>
+		<span>it will be </span><strong>{{weather.temp}}</strong>
+		<span>Deg. with </span>
 		{{weather.desc}}		
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>

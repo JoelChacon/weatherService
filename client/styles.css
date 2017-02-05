@@ -29,3 +29,11 @@
  	margin-right: auto;
  	margin-left: auto;
  }
+/*@media (min-width: 600px) and (max-width: 800px) {
+  html { background: red; }
+}
+*/
+.centered {
+	width: 1000px;
+	margin: 0 auto;
+}
